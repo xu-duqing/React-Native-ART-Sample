@@ -9,6 +9,7 @@ import {
 
 import Line from './Line';
 import DashLine from './DashLine';
+import Rect from './Rect'
 
 export default class App extends React.Component{
 
@@ -18,6 +19,8 @@ export default class App extends React.Component{
                 <Line style={{marginTop: 40,height:10}}/>
 
                 <DashLine style={{marginTop: 40,height:10}}/>
+
+                <Rect />
             </View>
         )
     }
