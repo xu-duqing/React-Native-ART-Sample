@@ -1,6 +1,7 @@
 /**
  * Created by Guang on 16/8/8.
  */
+
 import React from 'react'
 import {
     View,
@@ -9,7 +10,7 @@ import {
 
 const {Surface, Shape, Path} = ART;
 
-export default class Rect extends React.Component{
+export default class FillRect extends React.Component{
 
     render(){
 
@@ -23,7 +24,7 @@ export default class Rect extends React.Component{
         return(
             <View style={this.props.style}>
                 <Surface width={100} height={100}>
-                    <Shape d={path} stroke="#000000" strokeWidth={1} />
+                    <Shape d={path} stroke="#000000" fill="#000000" strokeWidth={1}/>
                 </Surface>
             </View>
         )

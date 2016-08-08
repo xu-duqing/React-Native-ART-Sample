@@ -10,6 +10,7 @@ import {
 import Line from './Line';
 import DashLine from './DashLine';
 import Rect from './Rect'
+import FillRect from './FillRect'
 
 export default class App extends React.Component{
 
@@ -21,6 +22,10 @@ export default class App extends React.Component{
                 <DashLine style={{marginTop: 40,height:10}}/>
 
                 <Rect />
+
+                <FillRect style={{marginTop:10}}/>
+
+
             </View>
         )
     }
