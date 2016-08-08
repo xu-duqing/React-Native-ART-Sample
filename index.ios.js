@@ -6,11 +6,13 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+    AppRegistry,
+    StyleSheet,
+    Text,
+    View,
+    ART
 } from 'react-native';
+
 
 class ReactNativeARTSample extends Component {
   render() {
