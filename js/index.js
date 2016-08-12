@@ -11,6 +11,7 @@ import Line from './Line';
 import DashLine from './DashLine';
 import Rect from './Rect'
 import FillRect from './FillRect'
+import Circle from './Circle';
 
 export default class App extends React.Component{
 
@@ -25,6 +26,7 @@ export default class App extends React.Component{
 
                 <FillRect style={{marginTop:10}}/>
 
+                <Circle style={{marginTop:10}}/>
 
             </View>
         )
