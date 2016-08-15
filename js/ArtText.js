@@ -18,7 +18,7 @@ export default class ArtText extends  React.Component{
         return(
             <View style={this.props.style}>
                 <Surface width={100} height={100}>
-                    <Text strokeWidth={1} strokeDash={[2,2,2,2]} stroke="#000" font="bold 40px Heiti SC" path={new Path().moveTo(5,5)} >Swipe</Text>
+                    <Text strokeWidth={1} strokeDash={[2,2,2,2]} stroke="#000" font="bold 35px Heiti SC" path={new Path().moveTo(40,40).lineTo(99,10)} >Swipe</Text>
                 </Surface>
             </View>
         )

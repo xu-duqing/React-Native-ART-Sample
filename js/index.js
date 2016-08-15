@@ -4,7 +4,8 @@
 
 import React from 'react'
 import {
-    View
+    View,
+    ScrollView
 } from 'react-native'
 
 import Line from './Line';
@@ -13,25 +14,33 @@ import Rect from './Rect'
 import FillRect from './FillRect'
 import Circle from './Circle';
 import ArtText from './ArtText'
+import Fan from './Fan'
+import GroupTest from './GroupTest'
 
 export default class App extends React.Component{
 
     render(){
         return(
-            <View style={{flex: 1}}>
-                <Line style={{marginTop: 40,height:10}}/>
+            <ScrollView>
+                <View style={{flex: 1}}>
 
-                <DashLine style={{marginTop: 40,height:10}}/>
+                    <GroupTest style={{marginTop:10}}/>
 
-                <Rect />
+                    <Line style={{marginTop: 40,height:10}}/>
 
-                <FillRect style={{marginTop:10}}/>
+                    <DashLine style={{marginTop: 40,height:10}}/>
 
-                <Circle style={{marginTop:10}}/>
+                    <Rect />
 
-                <ArtText style={{marginTop:10}}/>
+                    <FillRect style={{marginTop:10}}/>
 
-            </View>
+                    <Circle style={{marginTop:10}}/>
+
+                    <ArtText style={{marginTop:10}}/>
+
+
+                </View>
+            </ScrollView>
         )
     }
 
