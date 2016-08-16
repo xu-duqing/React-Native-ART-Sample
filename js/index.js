@@ -24,6 +24,8 @@ export default class App extends React.Component{
             <ScrollView>
                 <View style={{flex: 1}}>
 
+                    <Fan style={{marginTop:10}}/>
+
                     <GroupTest style={{marginTop:10}}/>
 
                     <Line style={{marginTop: 40,height:10}}/>
