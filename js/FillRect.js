@@ -24,7 +24,7 @@ export default class FillRect extends React.Component{
         return(
             <View style={this.props.style}>
                 <Surface width={100} height={100}>
-                    <Shape d={path} stroke="#000000" fill="#000000" strokeWidth={1}/>
+                    <Shape d={path} stroke="#000000" fill="#892265" strokeWidth={1}/>
                 </Surface>
             </View>
         )

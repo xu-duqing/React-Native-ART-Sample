@@ -21,7 +21,7 @@ export default class DashLine extends React.Component{
         return(
             <View style={this.props.style}>
                 <Surface width={300} height={2}>
-                    <Shape d={path} stroke="#000000" strokeWidth={2} strokeDash={[1,5,1,5]}/>
+                    <Shape d={path} stroke="#000000" strokeWidth={1} strokeDash={[10,5]}/>
                 </Surface>
             </View>
         )
