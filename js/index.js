@@ -16,6 +16,7 @@ import Circle from './Circle';
 import ArtText from './ArtText'
 import Fan from './Fan'
 import GroupTest from './GroupTest'
+import TransformTest from './TransformTest'
 
 export default class App extends React.Component{
 
@@ -23,6 +24,9 @@ export default class App extends React.Component{
         return(
             <ScrollView>
                 <View style={{flex: 1}}>
+
+
+                    <TransformTest style={{marginTop:50}} />
 
                     <Fan style={{marginTop:10}}/>
 
