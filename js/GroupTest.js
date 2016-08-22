@@ -35,7 +35,7 @@ export default class GroupTest extends React.Component{
 
 
         return(
-            <View>
+            <View style={this.props.style}>
                 <Surface width={100} height={100}>
                     <Group>
                         <Shape d={pathRect} stroke="#000000" fill="#000000" strokeWidth={1}/>
