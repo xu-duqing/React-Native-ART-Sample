@@ -17,6 +17,7 @@ import ArtText from './ArtText'
 import Fan from './Fan'
 import GroupTest from './GroupTest'
 import TransformTest from './TransformTest'
+import LinearGradientView from './LinearGradientView';
 
 export default class App extends React.Component{
 
@@ -25,6 +26,7 @@ export default class App extends React.Component{
             <ScrollView>
                 <View style={{flex: 1}}>
 
+                    <LinearGradientView style={{marginTop:50}}/>
 
                     <TransformTest style={{marginTop:50}} />
 
