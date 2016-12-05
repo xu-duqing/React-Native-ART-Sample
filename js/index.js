@@ -18,6 +18,7 @@ import Fan from './Fan'
 import GroupTest from './GroupTest'
 import TransformTest from './TransformTest'
 import LinearGradientView from './LinearGradientView';
+import RadialGradientView from './RadialGradientView';
 
 export default class App extends React.Component{
 
@@ -27,6 +28,8 @@ export default class App extends React.Component{
                 <View style={{flex: 1}}>
 
                     <LinearGradientView style={{marginTop:50}}/>
+
+                    <RadialGradientView style={{marginTop:50}} />
 
                     <TransformTest style={{marginTop:50}} />
 
