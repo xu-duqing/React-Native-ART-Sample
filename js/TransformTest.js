@@ -43,8 +43,6 @@ export default class TransformTest extends React.Component{
 
         var RING_TWO_ROTATE = new Transform().translate(84.000000, 89.000000).rotate(-240.000000).translate(-84.000000, -89.000000);
 
-        console.log(this.state.rotation);
-
         return(
             <View style={this.props.style}>
                 <Surface width={300} height={300}>
