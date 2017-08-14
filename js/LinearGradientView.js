@@ -27,7 +27,7 @@ export default class LinearGradientView extends React.Component{
     return(
       <View style={this.props.style}>
         <Surface width={100} height={100}>
-          <Shape d={path} stroke="#000000" fill={new LinearGradient({'0': '#000000','.5': '#43ff44', '1': '#FFFFFF'},"50","0","50","100")} strokeWidth={1}/>
+          <Shape d={path} stroke="#000000" fill={new LinearGradient({'0': '#000000', '1': '#43ff44'},"50","0","50","100")} strokeWidth={1}/>
         </Surface>
       </View>
     )
