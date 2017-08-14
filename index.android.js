@@ -20,7 +20,7 @@ class ReactNativeARTSample extends Component {
       <View style={styles.container}>
         <App />
       </View>
-    );
+      )
   }
 }
 
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    paddingTop: 50
   },
   welcome: {
     fontSize: 20,
