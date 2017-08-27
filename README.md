@@ -1,6 +1,6 @@
 # react native art绘图入门
 在React Native中ART是个非常重要的库，它让非常酷炫的绘图及动画变成了可能。但是可能是知道的人真的不多导致文档及少中文更少。很多都是把英文的参数列表翻译过来，也没有案例。于是决定出这样一份入门文档及可能遇到的坑，希望能够帮助到大家。本文的示例工程[https://github.com/xu-duqing/React-Native-ART-Sample](https://github.com/xu-duqing/React-Native-ART-Sample)
-
+***高级动画***：可参照[ART高级动画][1008611]
 ## 添加依赖
 >Android默认就包含ART库，IOS需要单独添加依赖库。
 
@@ -289,3 +289,6 @@ export default class GroupTest extends React.Component{
     }
 }
 ```
+
+
+[1008611]:https://github.com/jiarWang/AnimBezierShape
