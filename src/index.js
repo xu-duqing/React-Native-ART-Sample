@@ -14,6 +14,9 @@ import Fan from './Fan'
 import FillRect from './FillRect'
 import GroupView from './Group'
 import Line from './Line'
+import LinearGradientView from './LinearGradientView'
+import RadialGradientView from './RadialGradientView'
+import TransformView from './TransformView'
 
 class Home extends React.Component {
 
@@ -62,6 +65,23 @@ class Home extends React.Component {
           color="#841584"
         />
 
+        <Button
+          onPress={() => this.props.navigation.navigate('LinearGradientView')}
+          title="线性渐变"
+          color="#841584"
+        />
+
+        <Button
+          onPress={() => this.props.navigation.navigate('RadialGradientView')}
+          title="中心渐变"
+          color="#841584"
+        />
+
+        <Button
+          onPress={() => this.props.navigation.navigate('TransformView')}
+          title="绘制变换"
+          color="#841584"
+        />
 
       </View>
     )
@@ -92,6 +112,15 @@ const RootStack = StackNavigator({
   },
   Line: {
     screen: Line
+  },
+  LinearGradientView: {
+    screen: LinearGradientView
+  },
+  RadialGradientView: {
+    screen: RadialGradientView
+  },
+  TransformView: {
+    screen: TransformView
   }
 });
 
