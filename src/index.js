@@ -9,6 +9,7 @@ import { StackNavigator } from 'react-navigation';
 
 import ArtText from './ArtText'
 import Circle from './Circle'
+import DashLine from './DashLine'
 
 
 class Home extends React.Component {
@@ -27,6 +28,12 @@ class Home extends React.Component {
           title="绘制园"
           color="#841584"
         />
+
+        <Button
+          onPress={() => this.props.navigation.navigate('DashLine')}
+          title="绘制虚线"
+          color="#841584"
+        />
       </View>
     )
   }
@@ -41,6 +48,9 @@ const RootStack = StackNavigator({
   },
   Circle: {
     screen: Circle
+  },
+  DashLine: {
+    screen: DashLine
   }
 });
 
