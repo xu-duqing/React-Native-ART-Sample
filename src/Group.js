@@ -10,7 +10,7 @@ const {Surface, Shape,Text, Path,Group} = ART;
 export default class GroupView extends React.Component{
 
   static navigationOptions = {
-    title: 'FillRect',
+    title: 'Group',
   };
 
   render(){

@@ -13,6 +13,7 @@ import DashLine from './DashLine'
 import Fan from './Fan'
 import FillRect from './FillRect'
 import GroupView from './Group'
+import Line from './Line'
 
 class Home extends React.Component {
 
@@ -27,7 +28,13 @@ class Home extends React.Component {
 
         <Button
           onPress={() => this.props.navigation.navigate('Circle')}
-          title="绘制园"
+          title="绘制圆形"
+          color="#841584"
+        />
+
+        <Button
+          onPress={() => this.props.navigation.navigate('Line')}
+          title="绘制实线"
           color="#841584"
         />
 
@@ -54,6 +61,8 @@ class Home extends React.Component {
           title="绘制图层"
           color="#841584"
         />
+
+
       </View>
     )
   }
@@ -80,6 +89,9 @@ const RootStack = StackNavigator({
   },
   GroupView: {
     screen: GroupView
+  },
+  Line: {
+    screen: Line
   }
 });
 
