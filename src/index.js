@@ -5,8 +5,11 @@ import {
   StyleSheet
 } from 'react-native'
 
-import ArtText from './ArtText'
 import { StackNavigator } from 'react-navigation';
+
+import ArtText from './ArtText'
+import Circle from './Circle'
+
 
 class Home extends React.Component {
 
@@ -14,9 +17,14 @@ class Home extends React.Component {
     return (
       <View style={styles.container}>
         <Button
-          style={styles.button}
           onPress={() => this.props.navigation.navigate('ArtText')}
           title="绘制文本"
+          color="#841584"
+        />
+
+        <Button
+          onPress={() => this.props.navigation.navigate('Circle')}
+          title="绘制园"
           color="#841584"
         />
       </View>
@@ -30,6 +38,9 @@ const RootStack = StackNavigator({
   },
   ArtText: {
     screen: ArtText
+  },
+  Circle: {
+    screen: Circle
   }
 });
 
@@ -43,8 +54,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff'
-  },
-  button: {
-    flex: 1
   }
 });
