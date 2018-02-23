@@ -1,23 +1,50 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import {
+  View,
+  Button,
+  StyleSheet
+} from 'react-native'
 
 import ArtText from './ArtText'
+import { StackNavigator } from 'react-navigation';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
+
   render() {
     return (
       <View style={styles.container}>
-        <ArtText/>
+        <Button
+          style={styles.button}
+          onPress={() => this.props.navigation.navigate('ArtText')}
+          title="绘制文本"
+          color="#841584"
+        />
       </View>
-    );
+    )
+  }
+}
+
+const RootStack = StackNavigator({
+  Home: {
+    screen: Home,
+  },
+  ArtText: {
+    screen: ArtText
+  }
+});
+
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff'
   },
+  button: {
+    flex: 1
+  }
 });
