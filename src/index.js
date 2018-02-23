@@ -11,7 +11,7 @@ import ArtText from './ArtText'
 import Circle from './Circle'
 import DashLine from './DashLine'
 import Fan from './Fan'
-
+import FillRect from './FillRect'
 
 class Home extends React.Component {
 
@@ -41,6 +41,12 @@ class Home extends React.Component {
           title="绘制扇形"
           color="#841584"
         />
+
+        <Button
+          onPress={() => this.props.navigation.navigate('FillRect')}
+          title="绘制矩形"
+          color="#841584"
+        />
       </View>
     )
   }
@@ -61,6 +67,9 @@ const RootStack = StackNavigator({
   },
   Fan: {
     screen: Fan
+  },
+  FillRect: {
+    screen: FillRect
   }
 });
 
