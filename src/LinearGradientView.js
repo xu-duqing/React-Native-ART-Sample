@@ -1,31 +1,67 @@
 import React from 'react';
 import {
   View,
-  ART, StyleSheet
+  ART, StyleSheet,UIManager
 } from 'react-native';
 
 const {Surface, Shape, Path,LinearGradient} = ART;
 
 export default class LinearGradientView extends React.Component{
 
+  constructor(props) {
+    super(props);
+    // 初始状态
+    this.state = {
+      container : {
+        x:0,
+        y:0,
+        width:0,
+        height:0,
+        pageX:0,
+        pageY:0
+      }
+    };
+  }
+
   static navigationOptions = {
     title: 'Linear Gradient',
   };
 
+
+
   render(){
 
+    const container = this.state.container
     const path = new Path()
-    .moveTo(1,1)
-    .lineTo(1,99)
-    .lineTo(99,99)
-    .lineTo(99,1)
+    .move(0,0)
+    .line(container.width,0)
+    .line(container.width,container.height)
+    .lineTo(0,container.height)
     .close();
 
     return(
       <View style={styles.container}>
-        <Surface width={100} height={100}>
-          <Shape d={path} stroke="#000000" fill={new LinearGradient({'0': '#000000', '1': '#43ff44'},"50","0","50","100")} strokeWidth={1}/>
-        </Surface>
+        <View style={{height: 200}} onLayout={e => {
+          UIManager.measure(e.target, (x, y, width, height, pageX, pageY) => {
+            this.setState({
+              container: {
+                x,
+                y,
+                width,
+                height,
+                pageX,
+                pageY
+              }
+            })
+
+            console.log(this.state)
+          })
+        }}>
+
+          <Surface width={this.state.container.width} height={this.state.container.height}>
+            <Shape d={path} stroke="#000" fill={new LinearGradient({'0': '#E9AFCB', '1': '#FFFFCB'},"50","0","50","100")} strokeWidth={0}/>
+          </Surface>
+        </View>
       </View>
     )
   }
@@ -34,8 +70,14 @@ export default class LinearGradientView extends React.Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff'
   },
 });
+
+/**
+
+ <Surface style={{padding:0}}>
+ <Shape d={path} stroke="#000" fill={new LinearGradient({'0': '#E9AFCB', '1': '#FFFFCB'},"50","0","50","100")} strokeWidth={0}/>
+ </Surface>
+
+ **/

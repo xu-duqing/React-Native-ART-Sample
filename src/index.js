@@ -137,7 +137,7 @@ const RootStack = StackNavigator({
     TransformView: {
         screen: TransformView
     }
-});
+},{initialRouteName: 'Home'});
 
 export default class App extends React.Component {
     render() {
