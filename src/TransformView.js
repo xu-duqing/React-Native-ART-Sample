@@ -1,7 +1,9 @@
 import React from 'react'
 import {
   View,
-  ART, StyleSheet,
+  ART,
+  StyleSheet,
+  Button
 } from 'react-native'
 
 const {Surface,Transform,Shape,Path} = ART;
@@ -22,16 +24,6 @@ export default class TransformView extends React.Component{
     };
   }
 
-  componentDidMount() {
-    this.timer = setInterval(() =>{
-      this.setState({rotation: this.state.rotation>360?0 :this.state.rotation + 10});
-    },2)
-  }
-
-  componentWillUnMount() {
-    this.timer && clearInterval(this.timer);
-  }
-
   render(){
     const path = new Path()
     .moveTo(1,1)
@@ -40,13 +32,23 @@ export default class TransformView extends React.Component{
     .lineTo(99,1)
     .close();
 
-    const RING_TWO_ROTATE = new Transform().translate(84.000000, 89.000000).rotate(-240.000000).translate(-84.000000, -89.000000);
+    const RING_TWO_ROTATE = new Transform().translate(50.000000, 89.000000).rotate(-240.000000).translate(-84.000000, -89.000000);
 
     return(
       <View style={styles.container}>
         <Surface width={300} height={300}>
           <Shape d={path} fill="#000" strokeWidth={1} transform={RING_TWO_ROTATE} rotation={this.state.rotation} originX={84} originY={89}/>
         </Surface>
+
+        <View>
+          <Button
+            onPress={() => {
+              this.setState({rotation: this.state.rotation>360?0 :this.state.rotation + 10});
+            }}
+            title='点击旋转'
+            color="#841584"
+          />
+        </View>
       </View>
     )
   }
