@@ -28,7 +28,6 @@ export default class LinearGradientView extends React.Component{
   };
 
 
-
   render(){
 
     const container = this.state.container
@@ -73,11 +72,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
 });
-
-/**
-
- <Surface style={{padding:0}}>
- <Shape d={path} stroke="#000" fill={new LinearGradient({'0': '#E9AFCB', '1': '#FFFFCB'},"50","0","50","100")} strokeWidth={0}/>
- </Surface>
-
- **/
