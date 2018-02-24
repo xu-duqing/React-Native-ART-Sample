@@ -52,8 +52,6 @@ export default class LinearGradientView extends React.Component{
                 pageY
               }
             })
-
-            console.log(this.state)
           })
         }}>
 
